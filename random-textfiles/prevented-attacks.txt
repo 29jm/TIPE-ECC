@@ -1,0 +1,11 @@
+Curve characteristics:
+ - |E(F_p)| = k.r, k < 4, r > 2^160		(1)
+ - |E(F_p)| != p						(2)
+
+Brute-force: check. Using a large group cardinality mitigates the attack.
+Baby steps - giant steps: check. Memory use is prohibitive with large group cardinalities.
+Polhig-Hellman: check. Using a group of cardinality k.r with r a large prime, r small mitigates the attack.
+Pollard-rho: Large group cardinality should be enough. -> verify.
+Attack on anomalous curves: (2) prevents the attack entirely.
+Frey-Rück: check. The order of p as an element of F_r^x (multiplicative group of F_r) is at least 20.
+ -> prevents solving the ECDLP in F_p^20 (infeasible).

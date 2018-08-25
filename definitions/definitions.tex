@@ -1,0 +1,161 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Courbes Elliptiques - Définitions et théorèmes majeurs}
+\author{Johan Manuel}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Ker}{Ker}
+
+\begin{document}
+\shorthandoff{:}
+
+\maketitle
+
+\section{Définitions}
+
+On notera dans cette section $E$, $E_1$ et $E_2$ des courbes elliptiques, et $q = p^r$ avec $p$ premier
+et $r \in \mathbb{N}$.
+\vspace{5mm}
+
+\textbf{Degré d'une application (21):} Soit $\phi: E_1 \to E_2$. Si $\phi$ est constante, on définit
+  $\deg~ \phi = 0$. Sinon, $\deg~ \phi = [K(E_1) : \phi^*K(E_2)]$.
+\vspace{5mm}
+
+\textbf{Application séparable (21):} L'application $\phi: E_1 \to E_2$ est dite séparable si \newline
+  $K(E_1)/\phi^*K(E_2)$ est
+  séparable en tant qu'extension de corps. On note $\deg_s~ \phi$ et $\deg_i~ \phi$ les degrés séparables et
+  inséparables de l'extension, respectivement.
+\vspace{5mm}
+
+\textbf{Forme quadratique (85):} Soit $G$ un groupe commutatif. $d: G \to R$ est une forme quadratique si
+  \begin{itemize}
+    \item $\forall a \in G,~ d(a) = d(-a)$
+    \item $\psi: (a, b) \in G^2 \mapsto d(a+b) - d(a) - d(b)$ est une forme bilinéaire
+  \end{itemize}
+  $d$ est de plus dite \textit{définie positive} si $\forall a \in G,~ d(a) \geq 0$ et
+  $d(a) = 0 \Leftrightarrow a = 0$
+\vspace{5mm}
+
+\textbf{Application non ramifiée (24):} L'application $\phi: E_1 \to E_2$ est dite non-ramifiée si \newline
+  $\forall Q \in E_2,~ \#\phi^{-1}(\{Q\}) = \deg~ \phi.$
+\vspace{5mm}
+
+\textbf{Isogénie (66):} Une isogénie est un morphisme $\phi$ de $E_1$ dans $E_2$ tel que $\phi(O) = O$.
+\vspace{5mm}
+
+\textbf{Application [m] (69):} Soit $m \in \mathbb{N}$. On appelle $[m]: E \to E$ l'application "multiplication par m" et on note
+  $\forall P \in E,~ [m](P) = [m]P$.
+\vspace{5mm}
+
+\textbf{Sous groupe de m-torsion (69):} On note $E[m]$ l'ensemble des points de $E$ d'ordre $m$, i.e
+  $E[m] = \{P \in E ~|~ [m]P = O\} = \Ker~ [m]$.
+\vspace{5mm}
+
+\textbf{Courbe $E^{(q)}$ (25):} Notons $a_1,~ ...,~ a_6$ les coefficients de l’équation de Weierstrass de $E$. 
+  Alors on note $E^{(q)}$ la courbe elliptique définie par les coefficients $a_1^q,~ ...,~ a_6^q$.
+\vspace{5mm}
+
+\textbf{Morphisme de Frobenius (25, 70):} L'application 
+  \begin{align*}
+    \phi_q: E &\to E^{(q)}\\
+    (x, y) &\mapsto (x^q, y^q)
+  \end{align*}
+  est appelée morphisme de Frobenius. $\phi_q$ est inséparable et $\deg~ \phi_q = q$.
+  Si $E$ est définie sur $F_q$, alors $E = E^{(q)}$ et $\phi_q$ est un endomorphisme.
+\vspace{5mm}
+
+\textbf{Trace de Frobenius:} On appelle trace de Frobenius l'entier $a = q + 1 - \#E(F_q)$, puisque $a$
+est la trace de ${\phi_q}_\ell$, l'application induite par $\phi_q$ sur le module de Tate de $E$.
+
+\section{Théorèmes et propositions}
+
+\textbf{Proposition:} $End(E)$ a une structure d'anneau et forme un domaine intègre.
+\vspace{5mm}
+
+\textbf{Proposition:} Soit $m \in \mathbb{N}$. L'application $[m]$ est de degré $m^2$.
+\vspace{5mm}
+
+\textbf{Proposition (70):} Soit $E/F_q$. Alors l'ensemble des points fixes de $\phi_q$ est $E(F_q)$,
+l'ensemble des points à coordonnées dans $F_q$, i.e $E(F_q) = \{P \in E ~|~ \phi_q(P) = P\} = \Ker (\phi_q - Id).$
+\vspace{1mm}
+
+\textbf{Théorème III.4.10:} Soit $\phi: E_1 \to E_2$ une isogénie non nulle. Alors
+\begin{enumerate}
+	\item $\forall Q \in E_2,~ \#\phi^{-1}(\{Q\}) = \deg_s \phi$,
+	\item L'application $\psi: T \in \Ker \phi \mapsto \tau_T^*$ est un isomorphisme de $\Ker \phi$ sur \newline
+		$Aut(\overline{K}(E_1)/\phi^*\overline{K}(E_2)),$
+	\item Si $\phi$ est séparable, alors
+		\begin{enumerate}
+			\item $\phi$ est non ramifiée,
+			\item $\#\Ker \phi = \deg \phi,$
+			\item $\overline{K}(E_1)$ est une extension de Galois de $\phi^*\overline{K}(E_2).$
+		\end{enumerate}
+\end{enumerate}
+\vspace{5mm}
+
+\textbf{Proposition III.5.5 (79):} Soit $E/F_q$, $q = p^r$, $(m, n) \in \mathbb{Z}^2$. Alors $mId + n\phi_q: E \to E$ est
+séparable si et seulement si $p \nmid n$. En particulier, $Id - \phi_q$ est séparable.
+\vspace{5mm}
+
+\textbf{Lemme V.1.2 (138):} Soit $A$ un groupe commutatif, et $d:A \to Z$ une forme quadratique définie positive.
+Alors $\forall (a, b) \in A^2,~ |d(a-b) - d(a) - d(b)| \leq 2\sqrt{d(a)d(b)}.$ \newline
+C'est une adaptation de l’inégalité de Cauchy-Schwarz.
+\vspace{5mm}
+
+\textbf{Théorème de Hasse (138):} Soit $E/F_q$. Alors $|\#E(F_q) - (q+1)| \leq 2\sqrt{q}.$
+\vspace{5mm}
+
+\textbf{Proposition (89):} Soit $\phi: E_1 \to E_2$ une isogénie, $\ell$ premier. Alors $\phi$ induit une application
+$Z_\ell$-linéaire $\phi_\ell: T(E_1) \to T(E_2)$. Si $E_1 = E_2$, en choisissant une $Z_\ell$-base de $T_\ell(E)$,
+$\phi_\ell$ admet une représentation matricielle dans $GL_2(Z_\ell).$
+\vspace{5mm}
+
+\pagebreak
+
+\textbf{Proposition III.8.6 (99, 141):} Soit $\psi \in End(E)$. Alors
+\begin{enumerate}
+	\item $\det \psi_\ell = \deg \psi,$
+	\item $\tr \psi_\ell = 1 + \deg \psi - \deg(Id - \psi),$
+	\item $\det \psi_\ell,~ \tr \psi_\ell \in \mathbb{Z}^2.$
+\end{enumerate}
+\vspace{5mm}
+
+\textbf{Théorème V.2.3.1:} Soit $E/F_q$ une courbe elliptique, et $a = q + 1 - \#E(F_q)$.
+\begin{enumerate}
+	\item Soit $(\alpha,~ \beta) \in \mathbb{C}^2$ les racines de $X^2 - aX + q$. Alors $\alpha$ et $\beta$ sont complexes conjuguées
+		et vérifient $|\alpha|=|\beta|=\sqrt q$, et $\forall n \in \mathbb{N}^*,~ \#E(F_{q^n}) = q^n + 1 - \alpha^n - \beta^n.$
+	\item $\phi_q$ vérifie $\phi_q^2 - a\phi_q + qId = 0_{End(E)}.$
+\end{enumerate}
+\vspace{5mm}
+
+\section{Démonstrations}
+
+\textbf{Lemme V.1.2:} Soit $A$ un groupe commutatif et $d: A \to Z$ une forme quadratique définie positive. Posons
+$\forall (\psi,~ \phi) \in A,~ L(\psi, \phi) = d(\psi - \phi) - d(\psi) - d(\phi)$. $d$ étant une forme quadratique,
+$L$ est une forme bilinéaire\newline
+Soit $(m,~ n) \in \mathbb{Z}^2$. On a $L(m\psi, n\phi) = d(m\psi - n\phi) - d(m\psi) - d(n\phi)$ d’où
+$d(m\psi - n\phi) = d(m\psi) + L(n\psi, m\phi) + d(n\phi) = m^2d(\psi) + mnL(\psi, \phi) + n^2d(\phi) \geq 0$ par
+positivité de $d$. En prenant $m = -L(\psi, \phi)$ et $n = 2d(\psi)$, on obtient
+$$0 \leq - d(\psi)L(\psi, \phi)^2 + 4d(\psi)^2d(\phi) = d(\psi)(4d(\psi)d(\phi) - L(\psi, \phi)^2),$$
+d’où
+$$|d(\psi - \phi) - d(\psi) - d(\phi)| \leq 2\sqrt{d(\psi)d(\phi)}.$$
+
+\vspace{5mm}
+
+\textbf{Théorème de Hasse:} Soit $q = p^n$ avec $p$ premier et $n \in \mathbb{N}^*$, et $E/F_q$ une courbe elliptique.\newline
+On a $E(F_q) = \Ker(Id - \phi_q)$ d’après la théorie de Galois (voir en bas de la page 70). Or d’après III.5.5,
+$Id - \phi_q$ est séparable puisque $p \nmid 1$. Alors par le théorème III.4.10 on a
+$\#E(F_q) = \deg(Id-\phi_q)$. Comme l'application $\deg: End(E) \to Z$ est une forme quadratique et que $End(E)$
+forme un groupe commutatif, le lemme V.1.2 donne
+$$|\deg(Id-\phi_q) - \deg Id - \deg \phi_q| \leq 2\sqrt{\deg(Id)\deg(\phi_q)},$$
+d’où finalement
+$$|\#E(F_q) - (q + 1)| \leq 2\sqrt{q}.$$
+
+\end{document}

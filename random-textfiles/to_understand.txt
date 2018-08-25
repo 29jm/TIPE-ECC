@@ -1,0 +1,22 @@
+Can we really not define an elliptic curve in short weierstrass form over a field of characteristic 2 and 3?
+Attacks from torsion subggroups: why is the order of the point [#E/r]P equal to r ? (P generator, r | #E)
+ -> How does the rest of the attack work?
+Pairing-based attacks: are they usable in practice? Is this just fantasy?
+Pairing-based cryptography: what is it?
+Transfer attacks: additive, multiplicative, that make ECDLP easy. What are they?
+Invalid curve attacks, small subgroup attacks: https://safecurves.cr.yp.to/twist.html
+Other types of attacks (apart from bruteforcing ECDLP)? What's common, what's new...
+ -> Do I have any chance of using a timing attack on a vulnerable, home-made implementation?
+Are there other types of curves over which we can define the same group operation?
+Properties of j-invariant: how is it defined, why do we care (theoretically, in practice) ?
+What's the deal with the roots of X^q - X (or something) ?
+Are elliptic curves used solely for implementing the Diffie-Hellman key exchange? What about identity-based crypto?
+What's the algebraic closure of F_q? What's an algebraic closure? (not critical)
+Curve25519: why is it defined over F_p^2? What are the advantages of defining the curve over a field extension?
+On safecurves.cr.yp.to it says "ECDLP always computes nP correctly. Real-world ECC has failure cases." What are those?
+ -> How is large integer arithmetic implemented in C? GMP?
+Embedding degree, index calculus... I should know that, right?
+How do quantum computers solve the ECDLP (and DLPs in general) so efficiently?
+Who are the big names in ECC?
+Montgomery ladder: idea behind it, quick explanation.
+The extended euclidean algorithm for finding inverses modulo p: how does it work?

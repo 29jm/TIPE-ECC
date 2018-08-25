@@ -1,0 +1,6 @@
+all fields of equal order are isormorphic (which isomorphism?).
+F_p/(P(X)) with p prime and P in F_p[X] irreducible of degree n is a field of order p^n.
+a field of order p^n has characteristic p.
+existence of irreducible polynomial in F_p[X].
+the non-zero elements of a finite field form a multiplicative, cyclic group. existence of primitive element.
+Z/pZ is a field iff p is prime (ez).

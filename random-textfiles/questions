@@ -1,0 +1,8 @@
+Resoudre un DLP equivalent en difficulte a en resoudre plusieurs => pourquoi concretement
+
+Pourquoi utiliser un premier p de 2k bits resulte en un niveau de securite de k bits
+
+Idees pour utiliser les algorithmes implementes:
+ - temps moyen de generation de courbe (+stddev) pour les 2 methodes, pour plusieurs niveaux de securite {60, 90, 128, 160} -> 2 courbes t=f(bits)
+ - temps moyen pour resoudre un DLP pour un algo dans {trial mul, pollard-rho, baby-steps-giant-steps, polhig-hellman}
+ - simulation de ECDH avec negotiation de cle en live + temps total de l'echange

@@ -1,0 +1,7 @@
+- Compréhension et implémentation des opérations sur les courbes elliptiques
+- Implémentation de l'algorithme d'échange de clés Diffie-Hellman
+- Implémentation d'attaques du problème du logarithme discret
+- Compréhension et implémentation de l'algorithme de Schoof
+- Utilisation de l'algorithme de Schoof pour générer des courbes elliptiques sécurisées
+- Implémentation de la méthode de multiplication complexe
+- Optimisation des algorithmes implémentés.
